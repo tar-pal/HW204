@@ -2,7 +2,7 @@ import requests
 
 API_KEY = 'bb162c28be60f5bf4afb31a045255ad2'
 
-city = input('Enter city name:')
+
 
 def get_weather_dict(city, API_KEY):
     try:
@@ -16,3 +16,16 @@ def get_weather_dict(city, API_KEY):
 
     return data_dict
 
+def get_description(data_dict):
+    return data_dict['weather'][0]['description']
+
+def get_main_data(data_dict):
+    return data_dict['main']
+
+def get_wind(data_dict):
+    return data_dict['wind']
+
+if __name__ == 'main':
+    city = input('Enter city name:')
+    data_dict = get_weather_dict(city, API_KEY)
+    print(get_description)
