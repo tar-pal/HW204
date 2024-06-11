@@ -26,6 +26,7 @@ def get_wind(data_dict):
 if __name__ == '__main__':
     city = input('Enter city name: ')
     data_dict = get_weather_dict(city, API_KEY)
+    print(data_dict)
     print(get_description(data_dict))
     print(get_main_data(data_dict))
     print(get_wind(data_dict))
