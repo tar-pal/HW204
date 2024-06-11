@@ -1,5 +1,3 @@
-import json
-
 from openweather import get_weather_dict, get_description, get_main_data, get_wind, API_KEY
 import pytest
 
